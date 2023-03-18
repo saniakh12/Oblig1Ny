@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kinobillett applikasjon</title>
+  <style>
+    .inline { display: inline-block; float:left; margin: 5px;}
+    label {display: inline-block; width: 80px; margin-top: 5px;}
+    span { color: red;}
+    #innAntall { width: 30px; margin-bottom: 15px;}
+    #innFilm { width: 200px;}
+    th { border: 1px solid white; padding: 2px; font-size: 18px; text-align: left;}
+    td { border: 1px solid white; padding: 2px; font-size: 14px;}
+  </style>
+</head>
+<body>
+<h1>Kinobiletter</h1>
+<form>
+  <div>
+    <label for="inputFilm">Velg film:</label>
+    <select id="inputFilm">
+      <option value="" disabled selected hidden>Velg film her</option>
+      <option value="Dune">Dune</option>
+      <option value="The French Dispatch">The French Dispatch</option>
+      <option value="No Time to Die">No Time to Die</option>
+      <option value="Last Night in Soho">Last Night in Soho</option>
+      <option value="The Matrix Resurrections">The Matrix Resurrections</option>>
+    </select>
+  </div>
+  <div>
+    <label for="inputAntall">Antall</label>
+    <input id="inputAntall">
+    <span id="feilAntall"></span>
+  </div>
+
+  <div>
+    <label for="inputFornavn">Fornavn</label>
+    <input type="text" id="inputFornavn">
+    <span id="feilFornavn"></span>
+  </div>
+
+  <div>
+    <label for="inputEtternavn">Etternavn</label>
+    <input type="text" id="inputEtternavn">
+    <span id="feilEtternavn"></span>
+
+  </div>
+  <div>
+    <label for="inputTlf">Telefonnr</label>
+    <input type="text" id="inputTlf">
+    <span id="feilTlf"></span>
+  </div>
+
+  <div>
+    <label for="inputEpost">Epost</label>
+    <input type="text" id="inputEpost">
+    <span id="feilEpost"></span>
+  </div>
+
+  <button onclick="kjopBillett()" type="button">Kjøp billett</button>
+</form>
+
+<h2>Alle billetter</h2>
+<div>
+  <div id="#billett-tabell"></div>
+</div>
+<button onclick="slettBilletter()" type="button">Slett alle billettene</button>
+
+
+</body>
+<script src="index.js"></script>
+</html>
